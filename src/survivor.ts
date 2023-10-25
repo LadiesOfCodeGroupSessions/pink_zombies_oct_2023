@@ -12,8 +12,12 @@ export class Survivor{
     public getWoundCount(): number {
         return this.woundCount
     }
-    public getAttacked(): number {
-        return this.woundCount++;
+    public getAttacked(times:number): number {
+        return this.woundCount+=times;
+    }
+
+    public isAlive(): boolean {
+        return this.woundCount < 2;
     }
 }
 
